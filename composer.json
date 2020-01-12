@@ -1,0 +1,7 @@
+{
+    "name": "danie/numer23",
+    "require": {},
+    "autoload": {
+        "files": ["mix.php"]
+    }
+}

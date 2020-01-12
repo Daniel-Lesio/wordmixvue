@@ -1,0 +1,76 @@
+.section{
+    padding-top: 200px;
+    padding-bottom: 200px;
+ 
+}
+#hero{
+    min-height: 100vh;
+}
+
+.grid-hero{
+    width: 100%;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto  100px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "hb1 hb1 hb2 hb2"
+    "hb3 hb3 hb3 hb3"
+    ;
+    .hero-box-1{
+        grid-area: hb1;
+        display: flex;
+        align-items: center;
+        justify-content:flex-end;
+        background: honeydew;
+        .hero-text{
+            background: #7dce94;
+            text-align: right;
+            padding: 50px;
+            line-height:40px;
+            max-width: 100%;
+            
+            h1{
+                color: white;
+                font-weight: bold;
+                font-size: 40px;
+                letter-spacing: 5px;
+            }
+        }
+    }
+    .hero-box-2{
+        grid-area: hb2;
+        overflow: hidden;
+        position: relative;
+        img{
+            transition: all ease-in-out 0.3s;
+        
+            position: absolute;
+            transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            &:hover{
+                transition: all ease-in-out 0.3s;   
+                width: 110%;
+            }
+        }
+    }
+    .hero-box-3{
+        grid-area: hb3;
+        display: flex;
+        width: 100%;
+        .hero-scroll{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-scroll:nth-child(odd){
+            background: #ddd;
+            width: 33%;
+        }
+        .hero-scroll:nth-child(even){
+            width: 34%;
+        }
+    }
+}
